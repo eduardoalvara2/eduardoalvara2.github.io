@@ -40,18 +40,18 @@ $(document).ready(function(){
 
             
         }
-        if(time>lastIntervalSecondary+interval){
-            lastIntervalSecondary=time;
+        // if(time>lastIntervalSecondary+interval){
+        //     lastIntervalSecondary=time;
 
-            obj=$(".row:nth-child(2) .rightSide");
-            scroll=obj.scrollTop();
+        //     obj=$(".row:nth-child(2) .rightSide");
+        //     scroll=obj.scrollTop();
             
-            if($(window).width() > 768){
-                stickScroll(height,obj, scroll);
-            }else{
-                stickScroll(height*0.8,obj, scroll);
-            }
-        }
+        //     if($(window).width() > 768){
+        //         stickScroll(height,obj, scroll);
+        //     }else{
+        //         stickScroll(height*0.8,obj, scroll);
+        //     }
+        // }
 
     },interval);
 
