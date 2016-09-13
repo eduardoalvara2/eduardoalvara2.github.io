@@ -19,7 +19,6 @@ $(document).ready(function(){
 
     // By Eduardo Alvarado <eduardoalvara2@gmail.com>
     // 20 de Agosto de 2016
-
    
     var interval= 750;
 
