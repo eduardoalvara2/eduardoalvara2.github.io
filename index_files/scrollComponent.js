@@ -1,6 +1,9 @@
 var time;
 var lastInterval = 0;
+var lastIntervalSecondary = 0;
 var interval= 200;
+
+var lastIntervalSecondary = 0;
 
 $(document).scroll(function(){
     
@@ -34,6 +37,11 @@ $(document).ready(function(){
             obj=$("html, body");
             scroll=$(window).scrollTop();
             stickScroll(height,obj, scroll);
+
+            
+        }
+        if(time>lastIntervalSecondary+interval){
+            lastIntervalSecondary=time;
 
             obj=$(".row:nth-child(2) .rightSide");
             scroll=obj.scrollTop();
