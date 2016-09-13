@@ -1,14 +1,8 @@
 var time;
 var lastInterval = 0;
+var interval= 200;
 
 $(document).scroll(function(){
-
-    time = new Date().getTime();
-    lastInterval=time;
-
-});
-
-$(".row:nth-child(2) .rightSide").scroll(function(){
     
     time = new Date().getTime();
     lastInterval=time;
@@ -19,8 +13,6 @@ $(document).ready(function(){
 
     // By Eduardo Alvarado <eduardoalvara2@gmail.com>
     // 20 de Agosto de 2016
-   
-    var interval= 750;
 
     var height = 0;
     var obj;
@@ -45,7 +37,7 @@ $(document).ready(function(){
 
             obj=$(".row:nth-child(2) .rightSide");
             scroll=obj.scrollTop();
-            console.log(scroll);
+            
             if($(window).width() > 768){
                 stickScroll(height,obj, scroll);
             }else{
@@ -55,6 +47,7 @@ $(document).ready(function(){
 
     },interval);
 
+
 });
 
 
@@ -62,7 +55,7 @@ function stickScroll(height, object, scroll){
 
     var move = false;
     var moveTo = 0;
-    var range = height*0.45; //px
+    var range = height*0.49; //px
     
     if(between(scroll, 0, 0+range) && scroll !=0){
         move = true;        
@@ -115,5 +108,5 @@ function goTo(num){
 
     $("html, body").animate({
         scrollTop:moveTo
-    },500);
+    },interval);
 }
