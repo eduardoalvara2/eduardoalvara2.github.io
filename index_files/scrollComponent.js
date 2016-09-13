@@ -65,23 +65,23 @@ function stickScroll(height, object, scroll){
     var moveTo = 0;
     var range = height*0.49; //px
     
-    if(between(scroll, 0, 0+range) && scroll !=0){
+    if(between(scroll, 0, 0+range/2) && scroll !=0){
         move = true;        
         moveTo = 0;
     }
-    if(between(scroll, height-range, height+range) && scroll !=height){
+    if(between(scroll, height-range, height+range/2) && scroll !=height){
         move = true;        
         moveTo = height;
     }
-    if(between(scroll, (height*2)-range, (height*2)+range) && scroll !=height*2){
+    if(between(scroll, (height*2)-range, (height*2)+range/2) && scroll !=height*2){
         move = true;
         moveTo = height*2;
     }
-    if(between(scroll, (height*3)-range, (height*3)+range) && scroll !=height*3){
+    if(between(scroll, (height*3)-range, (height*3)+range/2) && scroll !=height*3){
         move = true;
         moveTo = height*3;
     }
-    if(between(scroll, (height*4)-range, (height*4)+range) && scroll !=height*4){
+    if(between(scroll, (height*4)-range, (height*4)+range/2) && scroll !=height*4){
         move = true;
         moveTo = height*4;
     }
